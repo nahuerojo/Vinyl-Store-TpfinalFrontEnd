@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main style="max-width: 500px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <h2>Datos de pago</h2>
+    <form id="checkout-form">
+      <label>Nombre completo</label>
+      <input type="text" required />
+
+      <label>Número de tarjeta</label>
+      <input type="text" maxlength="16" required />
+
+      <label>Vencimiento</label>
+      <input type="text" placeholder="MM/AA" required />
+
+      <label>Código de seguridad (CVV)</label>
+      <input type="text" maxlength="3" required />
+
+      <label>Email</label>
+      <input type="email" required />
+
+      <button type="submit" class="btn-finalizar">Pagar ahora</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("checkout-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("¡Compra realizada con éxito!");
+      localStorage.removeItem("cart");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

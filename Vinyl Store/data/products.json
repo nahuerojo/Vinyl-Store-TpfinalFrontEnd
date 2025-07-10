@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "title": "Abbey Road",
+    "artist": "The Beatles",
+    "price": 25.00,
+    "image": "assets/images/abbey-road.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "price": 28.00,
+    "image": "assets/images/dark-side.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "price": 22.00,
+    "image": "assets/images/back-in-black.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Nevermind",
+    "artist": "Nirvana",
+    "price": 26.00,
+    "image": "assets/images/nevermind.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "price": 29.00,
+    "image": "assets/images/thriller.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Random Access Memories",
+    "artist": "Daft Punk",
+    "price": 30.00,
+    "image": "assets/images/daft-punk.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Let it Bleed",
+    "artist": "Rolling Stones",
+    "price": 20.00,
+    "image": "assets/images/stones.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Doble Vida",
+    "artist": "Soda Stereo",
+    "price": 23.00,
+    "image": "assets/images/soda.jpg"
+  },
+  {
+    "id": 9,
+    "title": "OK Computer",
+    "artist": "Radiohead",
+    "price": 27.00,
+    "image": "assets/images/ok-computer.jpg"
+  },
+  {
+    "id": 10,
+    "title": "A Night at the Opera",
+    "artist": "Queen",
+    "price": 24.00,
+    "image": "assets/images/queen.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Bocanada",
+    "artist": "Gustavo Cerati",
+    "price": 21.00,
+    "image": "assets/images/bocanada.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Almendra I",
+    "artist": "Almendra",
+    "price": 19.00,
+    "image": "assets/images/almendra.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Burn",
+    "artist": "Deep Purple",
+    "price": 19.00,
+    "image": "assets/images/burn.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Leo Mattioli",
+    "artist": "Un Homenaje al Cielo",
+    "price": 19.00,
+    "image": "assets/images/leo.jpg"
+  }
+]
