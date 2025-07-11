@@ -57,7 +57,8 @@ main {
   padding: 30px 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin-bottom: 20px;
   font-weight: 700;
 }
@@ -73,7 +74,7 @@ h1, h2 {
   background-color: #fff;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
@@ -108,13 +109,145 @@ h1, h2 {
   background-color: #333;
 }
 
-/* === CARRITO === */
-#carrito {
-  background-color: #fff;
+/* === CARRITO - ESTILOS MEJORADOS === */
+.cart-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cart-title {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.cart-subtitle {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin: 1.5rem 0 1rem;
+}
+
+.cart-item {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3498db;
+  transition: transform 0.2s;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.item-detail {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+/* Checkboxes modernos */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #3498db;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  left: 2px;
+  top: -1px;
+}
+
+.cart-total {
+  background: #2c3e50;
+  color: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.checkout-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.checkout-btn:hover {
+  background: #2980b9;
+}
+
+.continue-btn {
+  background: white;
+  color: #3498db;
+  border: 2px solid #3498db;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.continue-btn:hover {
+  background: #f8fafc;
+}
+
+/* Mantén estos estilos existentes (NO los borres) */
+.carrito-flotante {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
   padding: 20px;
-  margin-top: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.carrito-flotante.activo {
+  right: 0;
 }
 
 .cart-item {
@@ -171,6 +304,7 @@ footer {
     margin: 10px 0 0 0;
   }
 }
+
 .btn-inicio {
   display: inline-block;
   margin: 20px 0;
@@ -186,6 +320,7 @@ footer {
 .btn-inicio:hover {
   background-color: #333;
 }
+
 .benefits {
   display: flex;
   flex-wrap: wrap;
@@ -217,6 +352,7 @@ footer {
   font-size: 0.95rem;
   color: #444;
 }
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -280,11 +416,13 @@ footer {
 .product-card button:hover {
   background-color: #a30000;
 }
+
 .product-artist {
   font-size: 0.9rem;
   color: #666;
   font-style: italic;
 }
+
 .product-card h3 {
   font-size: 1.1rem;
   margin: 10px 0 5px;
@@ -316,6 +454,7 @@ footer {
 .add-btn:hover {
   background-color: #a30000;
 }
+
 .logo-container {
   text-align: center;
   margin-top: 20px;
@@ -325,11 +464,13 @@ footer {
   max-width: 160px;
   height: auto;
 }
+
 @media (min-width: 768px) {
   .logo-tienda {
     max-width: 200px;
   }
 }
+
 header.banner {
   background-image: url("../assets/images/banner.png");
   background-size: cover;
@@ -337,15 +478,17 @@ header.banner {
   background-repeat: no-repeat;
   padding: 20px 0;
   color: white;
+
   header.banner {
-  height: 200px; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
 }
+
 nav ul {
   list-style: none;
   display: flex;
@@ -368,6 +511,7 @@ nav ul li a {
 nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 .search-bar {
   display: flex;
   justify-content: center;
@@ -408,6 +552,7 @@ nav ul li a:hover {
 .search-btn:hover {
   color: crimson;
 }
+
 .barra-contacto {
   background-color: #111;
   color: white;
@@ -433,6 +578,7 @@ nav ul li a:hover {
 .barra-contacto a.btn-contacto:hover {
   background-color: #a30000;
 }
+
 .btn-finalizar {
   display: inline-block;
   margin-top: 20px;
@@ -448,6 +594,7 @@ nav ul li a:hover {
 .btn-finalizar:hover {
   background-color: darkgreen;
 }
+
 form label {
   display: block;
   margin-top: 15px;
@@ -460,4 +607,49 @@ form input {
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+
+.custom-player {
+  background: rgba(26, 26, 26, 0.9);
+  border: 1px solid #8B4513;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+audio {
+  width: 100%;
+  background: #333;
+  border-radius: 0;
+}
+
+.playlist {
+  margin-top: 15px;
+}
+
+.track {
+  padding: 8px;
+  cursor: pointer;
+  color: #FFD700;
+}
+
+.track:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.reseñas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.reseña {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

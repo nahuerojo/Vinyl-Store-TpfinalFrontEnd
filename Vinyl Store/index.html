@@ -1,91 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Tienda de vinilos clásicos y modernos.">
+  <meta name="author" content="Nahuel Gonzalez" />
+  <meta name="keywords" content="vinilos, tienda de discos, música, rock, pop, clásicos" />
+  <meta name="robots" content="index, follow" />
   <title>Vinyl Store</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a7a1a65e59.js" crossorigin="anonymous"></script>
 
 </head>
-<body><header class="banner">
-  <div class="logo-container">
-    <img src="assets/images/logo.png" alt="Logo de Vinyl Store" class="logo-tienda" />
-  </div>
 
-  <nav>
-    <ul>
-      <li><a href="#productos"><i class="fas fa-record-vinyl"></i> Productos</a></li>
-      <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
-      <li><a href="#" id="toggle-cart"><i class="fas fa-shopping-cart"></i> Carrito (<span id="cart-count">0</span>)</a></li>
-      <a href="index.html" class="btn btn-inicio">Volver al inicio</a>
-    </ul>
-  </nav>
+<body>
+  <header class="banner">
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="Logo de Vinyl Store" class="logo-tienda" />
+    </div>
 
-  <section class="search-bar">
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Buscar discos o artistas..." />
-    <button type="submit" class="search-btn">
-      <i class="fas fa-search"></i>
-    </button>
-  </div>
-</section>
+    <nav>
+      <ul>
+        <li><a href="#productos"><i class="fas fa-record-vinyl"></i> Productos</a></li>
+        <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+        <li><a href="#" id="toggle-cart"><i class="fas fa-shopping-cart"></i> Carrito (<span
+              id="cart-count">0</span>)</a></li>
+        <a href="index.html" class="btn btn-inicio">Volver al inicio</a>
+      </ul>
+    </nav>
 
-</header>
-
+    <section class="search-bar">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar discos o artistas..." />
+        <button type="submit" class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </section>
 
     </nav>
   </header>
 
   <main>
-    <section id="catalogo">
+    <section id="productos">
       <h1>Tienda de Vinilos</h1>
       <div id="product-list"></div>
     </section>
   </main>
 
-<section id="carrito" style="display: none;">
-  <h2>Carrito de compras</h2>
-  <div id="cart-items"></div>
-  <p><strong>Total:</strong> $<span id="cart-total"></span></p>
-  <a href="checkout.html" class="btn-finalizar">Finalizar compra</a>
-</section>
-<main>
-  
-
-  <footer>
-    <p>&copy; 2025 Vinyl Store</p>
-  </footer>
-
-  <script type="module" src="js/main.js"></script>
-
-<section class="benefits">
-  <div class="benefit">
-    <img src="assets/icons/shop.png" alt="Ícono tienda" />
-    <h3>Comprá desde cualquier lugar</h3>
-    <p>Sumá los productos que quieras al carrito. Te los llevamos hasta donde estés.</p>
+  <div id="carrito-flotante" class="carrito-flotante oculto">
+    <div class="carrito-header">
+      <h3>🛒 Tu Carrito</h3>
+      <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
+    </div>
+    <div id="cart-items" class="carrito-items"></div>
+    <div class="carrito-footer">
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <a href="checkout.html" class="btn-finalizar">Finalizar compra</a>
+    </div>
   </div>
 
-  <div class="benefit">
-    <img src="assets/icons/card.png" alt="Ícono tarjeta" />
-    <h3>Elegí tu medio de pago favorito</h3>
-    <p>Pagá con tarjeta o en efectivo. Tu dinero está protegido con Mercado Pago.</p>
-  </div>
+  </section>
+  <main>
 
-  <div class="benefit">
-    <img src="assets/icons/box.png" alt="Ícono paquete" />
-    <h3>Recibí tus productos en menos de 48 hs</h3>
-    <p>Tus paquetes están seguros. Tenés el respaldo de los envíos con Mercado Libre.</p>
-  </div>
-</section>
+    <section class="custom-player">
+      <h3><i class="fas fa-volume-up"></i> Demo Tracks</h3>
+      <div class="player-container">
+        <audio id="audio-player" controls>
+          <source src="assets/audio/sample1.flac" type="audio">
+          Tu navegador no soporta audio.
+        </audio>
+        <div class="playlist">
+          <div class="track" data-src="assets/audio/Sample1.flac"> Pappo - ¿Adónde está la libertad?</div>
+          <div class="track" data-src="assets/audio/sample2.flac"> Pappo - Hombre suburbano </div>
+        </div>
+      </div>
+      <p class="disclaimer">* Fragmentos de 30 segundos con fines educativos.</p>
+    </section>
 
-<section class="barra-contacto">
-  <p>Tel: 1144550022 | ventas@vinylstore.com.ar | Avenida Manal 2040 Local 90 - Capital Federal</p>
-  <a href="contacto.html" class="btn-contacto">Escribinos</a>
-</section>
+    <section id="reseñas" class="reseñas-grid">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="reseñas-container">
+        <div class="reseña">
+          <p>“Excelente atención y envío rapidísimo.”</p>
+          <strong>- Julieta R.</strong>
+        </div>
+        <div class="reseña">
+          <p>“Los vinilos llegaron impecables, muy buena calidad.”</p>
+          <strong>- Marcos L.</strong>
+        </div>
+        <div class="reseña">
+          <p>“¡Gran selección de discos nacionales e internacionales!”</p>
+          <strong>- Florencia M.</strong>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Vinyl Store</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+
+    <section class="benefits">
+      <div class="benefit">
+        <img src="assets/icons/shop.png" alt="Ícono tienda" />
+        <h3>Comprá desde cualquier lugar</h3>
+        <p>Sumá los productos que quieras al carrito. Te los llevamos hasta donde estés.</p>
+      </div>
+
+      <div class="benefit">
+        <img src="assets/icons/card.png" alt="Ícono tarjeta" />
+        <h3>Elegí tu medio de pago favorito</h3>
+        <p>Pagá con tarjeta o en efectivo. Tu dinero está protegido con Mercado Pago.</p>
+      </div>
+
+      <div class="benefit">
+        <img src="assets/icons/box.png" alt="Ícono paquete" />
+        <h3>Recibí tus productos en menos de 48 hs</h3>
+        <p>Tus paquetes están seguros. Tenés el respaldo de los envíos con Mercado Libre.</p>
+      </div>
+    </section>
+
+    <section class="barra-contacto">
+      <p>Tel: 1144550022 | ventas@vinylstore.com.ar | Avenida Manal 2040 Local 90 - Capital Federal</p>
+      <a href="contacto.html" class="btn-contacto">Escribinos</a>
+    </section>
 
 
 </body>
+
 </html>
