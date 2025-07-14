@@ -109,7 +109,7 @@ h2 {
   background-color: #333;
 }
 
-/* === CARRITO - ESTILOS MEJORADOS === */
+/* === CARRITO MEJORADO === */
 .cart-container {
   max-width: 800px;
   margin: 2rem auto;
@@ -162,7 +162,7 @@ h2 {
   color: #555;
 }
 
-/* Checkboxes modernos */
+/* Checkboxes */
 input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
@@ -232,7 +232,7 @@ input[type="checkbox"]:checked::after {
   background: #f8fafc;
 }
 
-/* Mantén estos estilos existentes (NO los borres) */
+/* === OVERLAY Y LOGO === */
 .carrito-flotante {
   position: fixed;
   top: 0;

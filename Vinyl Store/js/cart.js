@@ -62,6 +62,7 @@ export function renderCart() {
   </div>
   <button class="remove-btn" data-id="${item.id}">🗑</button>
 `;
+    `;
     cartContainer.appendChild(div);
   });
 

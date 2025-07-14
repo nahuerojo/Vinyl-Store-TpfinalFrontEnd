@@ -10,13 +10,13 @@ fetchProducts();
 document.getElementById('toggle-cart').addEventListener('click', (e) => {
   e.preventDefault();
   document.getElementById('carrito-flotante').classList.toggle('activo');
-  renderCart(); // Asegúrate de que esta función esté importada
+  renderCart(); // actualiza el nuevo contenedor
 });
 
 btnToggle.addEventListener("click", (e) => {
   e.preventDefault();
   carritoFlotante.classList.toggle("activo");
-  renderCart(); // Asegurate de que esto actualiza el nuevo contenedor
+  renderCart(); // actualiza el nuevo contenedor
 });
 
 btnCerrar.addEventListener("click", () => {
