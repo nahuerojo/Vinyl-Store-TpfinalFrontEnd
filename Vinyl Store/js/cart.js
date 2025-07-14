@@ -52,12 +52,16 @@ export function renderCart() {
     const div = document.createElement("div");
     div.classList.add("cart-item");
     div.innerHTML = `
-      <img src="${product.image}" alt="${product.title}" width="50" />
-      <strong>${product.title}</strong> - 
-      <input type="number" min="1" value="${item.quantity}" data-id="${item.id}" class="quantity-input" /> x 
-      $${product.price} = $${subtotal.toFixed(2)}
-      <button class="remove-btn" data-id="${item.id}">Eliminar</button>
-    `;
+  <img src="${product.image}" alt="${product.title}" width="50" />
+  <div class="info-cart">
+    <strong>${product.title}</strong> - <em>${product.artist}</em><br>
+    <span>Cantidad:</span> 
+    <input type="number" min="1" value="${item.quantity}" data-id="${item.id}" class="quantity-input" /> 
+    x $${product.price.toFixed(2)} = 
+    <strong>$${subtotal.toFixed(2)}</strong>
+  </div>
+  <button class="remove-btn" data-id="${item.id}">🗑</button>
+`;
     cartContainer.appendChild(div);
   });
 
