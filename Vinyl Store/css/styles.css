@@ -12,6 +12,7 @@ html {
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f4f4f4;
@@ -688,4 +689,21 @@ audio {
   padding: 4px 6px;
   cursor: pointer;
   font-size: 14px;
+}
+
+.btn-cerrar {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #444;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-cerrar:hover {
+  transform: scale(1.2);
+  color: #c0392b;
 }
