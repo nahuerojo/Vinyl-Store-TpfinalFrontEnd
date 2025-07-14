@@ -26,4 +26,4 @@ document.querySelectorAll('.track').forEach(track => {
         player.src = src;
         player.play();
     });
-}
+});

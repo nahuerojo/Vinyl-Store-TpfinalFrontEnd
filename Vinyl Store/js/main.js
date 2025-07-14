@@ -13,6 +13,10 @@ document.getElementById('toggle-cart').addEventListener('click', (e) => {
   renderCart(); // actualiza el nuevo contenedor
 });
 
+const btnToggle = document.getElementById('toggle-cart');
+const carritoFlotante = document.getElementById('carrito-flotante');
+const btnCerrar = document.getElementById('cerrar-carrito');
+
 btnToggle.addEventListener("click", (e) => {
   e.preventDefault();
   carritoFlotante.classList.toggle("activo");
