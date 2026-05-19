@@ -1,15 +1,27 @@
-import { loadCart } from "./cart.js";
-import { fetchProducts } from "./api.js";
+// js/main.js
 
+import { loadCart, renderCart } from "./cart.js";
+import { fetchProducts } from "./api.js";
+import "./player.js"; // Módulo para manejar el reproductor de audio
+
+// Carga inicial de carrito y productos
 loadCart();
 fetchProducts();
-import { renderCart } from "./cart.js";
 
-// Mostrar u ocultar carrito al hacer clic
-document.getElementById("toggle-cart").addEventListener("click", (e) => {
+// Referencias a elementos del DOM
+const toggleBtn = document.getElementById("toggle-cart");
+const carritoFlotante = document.getElementById("carrito-flotante");
+const cerrarBtn = document.getElementById("cerrar-carrito");
+
+// Mostrar/ocultar carrito al hacer clic en el icono del carrito
+toggleBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const section = document.getElementById("carrito");
-  const isVisible = section.style.display === "block";
-  section.style.display = isVisible ? "none" : "block";
-  renderCart();
+  carritoFlotante.classList.toggle("activo");
+  renderCart(); // Actualiza el contenido del carrito
 });
+
+// Cerrar carrito al hacer clic en la “X”
+cerrarBtn.addEventListener("click", () => {
+  carritoFlotante.classList.remove("activo");
+});
+

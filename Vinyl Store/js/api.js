@@ -26,7 +26,7 @@ export async function fetchProducts() {
       container.appendChild(card);
     });
 
-    // ✅ Agregamos eventos a los botones
+    //eventos para los botones
     const botones = document.querySelectorAll(".add-btn");
     botones.forEach((btn) => {
       btn.addEventListener("click", () => {
