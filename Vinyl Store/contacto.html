@@ -3,77 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contacto | Vinyl Store</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .form-contacto {
-      max-width: 600px;
-      margin: 60px auto;
-      padding: 30px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .form-contacto h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .form-contacto label {
-      display: block;
-      margin: 12px 0 6px;
-      font-weight: 600;
-    }
-
-    .form-contacto input,
-    .form-contacto textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .form-contacto textarea {
-      resize: vertical;
-      height: 100px;
-    }
-
-    .form-contacto button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 12px;
-      background-color: crimson;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .form-contacto button:hover {
-      background-color: #a30000;
-    }
-  </style>
+  <meta name="description" content="Contacta con Vinyl Store para consultas y sugerencias.">
+  <meta name="keywords" content="contacto, soporte, consultas, vinilos">
+  <meta name="author" content="Nahuel González">
+  <title>Contacto - Vinyl Store</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a7a1a65e59.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
+<header class="banner">
+  <div class="logo-container">
+    <img src="assets/images/logo.png" alt="Logo de Vinyl Store" class="logo-tienda" />
+  </div>
 
-  <main>
-    <form class="form-contacto">
-      <h2>Contacto</h2>
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required>
+  <nav>
+    <ul>
+      <li><a href="index.html#productos"><i class="fas fa-record-vinyl"></i> Productos</a></li>
+      <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+      <li><a href="index.html" id="toggle-cart"><i class="fas fa-shopping-cart"></i> Carrito (<span id="cart-count">0</span>)</a></li>
+      <a href="index.html" class="btn btn-inicio">Volver al inicio</a>
+    </ul>
+  </nav>
+</header>
 
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required>
+<main>
+  <section id="contacto" class="contact-section">
+    <h1>Contactanos</h1>
+    <p>¿Tienes preguntas o sugerencias? Nos encantaría saber de ti.</p>
+    
+    <div class="contact-container">
+      <div class="contact-form">
+        <h2>Envía tu mensaje</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
 
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" required></textarea>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
 
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </main>
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" required />
+          </div>
 
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2>Información de contacto</h2>
+        
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Dirección</h3>
+            <p>Avenida Manal 2040 Local 90<br>Capital Federal, Argentina</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h3>Teléfono</h3>
+            <p>+54 11 4455-0022</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>ventas@vinylstore.com.ar</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <h3>Horarios de atención</h3>
+            <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00<br>Domingos: Cerrado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Vinyl Store - Todos los derechos reservados</p>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const nombre = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const asunto = document.getElementById('asunto').value;
+  const mensaje = document.getElementById('mensaje').value;
+  
+  // Validación simple
+  if (!nombre || !email || !asunto || !mensaje) {
+    alert('Por favor completa todos los campos.');
+    return;
+  }
+  
+  // Simular envío del formulario
+  alert(`¡Gracias ${nombre}! Tu mensaje ha sido recibido. Te contactaremos pronto en ${email}`);
+  
+  // Limpiar formulario
+  this.reset();
+});
+</script>
 </body>
 </html>

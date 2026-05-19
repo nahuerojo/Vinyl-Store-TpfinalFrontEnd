@@ -2,8 +2,9 @@ import { addToCart } from "./cart.js";
 
 export async function fetchProducts() {
   try {
-    const response = await fetch("data/products.json");
+    const response = await fetch("https://686fbd2291e85fac42a25618.mockapi.io/products");
     const products = await response.json();
+    localStorage.setItem("products", JSON.stringify(products));
     const container = document.getElementById("product-list");
 
     container.innerHTML = "";
